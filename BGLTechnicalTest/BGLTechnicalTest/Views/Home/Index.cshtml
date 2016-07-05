@@ -1,0 +1,68 @@
+﻿@model BGLTechnicalTest.Models.APIResult
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Github API</h1>
+        
+    @using (Html.BeginForm())
+    {
+        <p>
+            Search User: @Html.TextBox("SearchString") 
+            <input type="submit" value="Submit" />
+        </p>
+    } 
+</div>
+
+@if (Model != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary" id="panelUsers">
+                <div class="panel-heading">
+                    <h2 class="panel-title">API Details</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-heading">
+                        <h3>@Model.UserName </h3><br/>
+                        <strong>@Model.Location </strong><br />
+                        <img class="media-object" height="120" src="@Model.Avatar" alt="" />
+                    </div>
+
+                   
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-condensed shortMargin">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>FullName</th>
+                                        <th>Description</th>
+                                        <th>CreatedDate</th>
+                                        <th>StargazersCount</th>
+                                        <th>Language</th>
+                                        <th>DefaultBranch</th>
+                                    </tr>
+
+                                    @foreach (var item in Model.Repositories)
+                                    {
+                                        <tr>
+                                            <td class="shortPadding"><i>@item.name</i></td>                                       
+                                            <td class="shortPadding"><i>@item.full_name</i></td>                                       
+                                            <td class="shortPadding"><i>@item.description</i></td>                                       
+                                            <td class="shortPadding"><i>@item.created_at</i></td>
+                                            <td class="shortPadding"><i>@item.stargazers_count</i></td>
+                                            <td class="shortPadding"><i>@item.language</i></td>
+                                            <td class="shortPadding"><i>@item.default_branch</i></td>
+                                        </tr>
+                                    }
+
+                                </table>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
