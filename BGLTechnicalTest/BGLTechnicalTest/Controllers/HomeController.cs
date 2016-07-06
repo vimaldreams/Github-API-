@@ -20,7 +20,7 @@ namespace BGLTechnicalTest.Controllers
                 userData = new PageResponse();
 
                 //an abstract class can be instantiated by using a concrete class
-                UserPageSearchBase userSearchBase = new UserPageProvider();
+                UserSearchBase userSearchBase = new UserProvider();
                                
                 request.rawUrl = "https://api.github.com/users/" + searchString;
                 userData = userSearchBase.GetUserAvailabilityLiveSearch(request);

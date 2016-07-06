@@ -5,9 +5,9 @@ using System;
 
 namespace BGLTechnicalTest.Models
 {
-    public class UserPageParser : IUserPageParser
+    public class UserParser : IUserParser
     {
-        public UserPageParser() 
+        public UserParser() 
         {
  
         }

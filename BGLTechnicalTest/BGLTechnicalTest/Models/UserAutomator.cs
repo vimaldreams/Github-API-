@@ -3,9 +3,9 @@ using BGLTechnicalTest.Utilities;
 
 namespace BGLTechnicalTest.Models
 {
-    public class UserPageAutomator : IUserPageAutomator
+    public class UserAutomator : IUserAutomator
     {
-        public UserPageAutomator()
+        public UserAutomator()
         { 
         
         }

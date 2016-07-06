@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace BGLTechnicalTest.Models
 {
-    public class UserPageProvider : UserPageSearchBase
+    public class UserProvider : UserSearchBase
     {
-        private readonly UserPageAutomator automator;
-        private readonly UserPageParser parser;
+        private readonly UserAutomator automator;
+        private readonly UserParser parser;
 
-        public UserPageProvider()
+        public UserProvider()
         {
-            automator = new UserPageAutomator();
-            parser = new UserPageParser();
+            automator = new UserAutomator();
+            parser = new UserParser();
         }
 
         public override PageResponse GetUserAvailabilityResponse(PageRequest request)

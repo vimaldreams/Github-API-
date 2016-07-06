@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace BGLTechnicalTest.Models.Interfaces
 {
-    public interface IUserPageAutomator
+    public interface IUserSearchBase
     {
-        PageResponse GetUserPageResponse(PageRequest request);
+        PageResponse GetUserAvailabilityLiveSearch(PageRequest request);
     }
 }

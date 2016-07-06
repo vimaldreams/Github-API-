@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BGLTechnicalTest.Models
 {
-    public abstract class UserPageSearchBase : IUserPageSearchBase
+    public abstract class UserSearchBase : IUserSearchBase
     {
-        protected UserPageSearchBase()
+        protected UserSearchBase()
         { 
         
         }
